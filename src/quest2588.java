@@ -6,7 +6,9 @@ public class quest2588 {
             // // 세자리 자연수 첫번째줄,두번째줄에 들어갈때
             // // 세자리 두 자연수를 곱했을때의 자리들을 각각 표현하기.
             int first = 453;
-            System.out.println (first % 10); 
+            System.out.println (first +" 1의 자리" + first % 10); 
+            System.out.println (first + "10의 자리" + (first/10) % 10);
+            System.out.println (first +" 100의 자리"+ first / 100);
             
             // public class MultiplicationDigits {
             //     public static void main(String[] args) {
