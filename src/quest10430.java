@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Main {
+
+public class quest10430 {
     public static void main(String[] args) {
         // 백준 10430
         // 입력: 첫줄_A,B,C
@@ -20,6 +21,5 @@ public class Main {
         System.out.println ((A*B)%C);
         System.out.println (((A%C)*(B%C))%C);
     }
-        // return 0 ;
-    }
-
+    // return 0 ;
+}
