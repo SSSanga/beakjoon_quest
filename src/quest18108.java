@@ -1,7 +1,8 @@
 import java.util.Scanner;
-public class Main {
+
+public class quest18108 {
     public static void main(String[] args) {
-         // 백준 18108
+        // 백준 18108
         // 입력: 불기연도를 서기연도로 변경 = 서기연도 + 543 = y
         // 출력: 불기연도를 서기연도로 변환
         // 입력: 불기연도
@@ -14,6 +15,5 @@ public class Main {
         int x = 543;
         System.out.print(y - x);
     }
-        // return 0 ;
-    }
-
+    // return 0 ;
+}
