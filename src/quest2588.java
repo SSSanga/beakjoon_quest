@@ -10,6 +10,13 @@ public class quest2588 {
             System.out.println (first + "10의 자리" + (first/10) % 10);
             System.out.println (first +" 100의 자리"+ first / 100);
             
+            Scanner myObj =  new Scanner (System.in);
+            int A = myObj.nextInt(); int B = myObj.nextInt();
+            System.out.println (A * (B%10));
+            System.out.println(A * ((B/10)%10));
+            System.out.println(A * (B/100));
+            System.out.println (A*B);
+            
             // public class MultiplicationDigits {
             //     public static void main(String[] args) {
             //         int num1 = 123; // 첫 번째 세 자리 수
