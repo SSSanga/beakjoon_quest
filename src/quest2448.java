@@ -13,19 +13,20 @@ public class quest2448 {
 
         int myhour = mytime.nextInt();
         int mymin = mytime.nextInt();
-        if (0 < myhour && myhour <= 23 && 45 < mymin && mymin<= 59) {
+        if (0 < myhour && myhour <= 23 &&  mymin <45 ) {
             System.out.println((myhour - 1) + ":" + ((mymin - 45) + 60));
         }
-        else if (0 < myhour && myhour <= 23 && mymin <= 59) {
-            System.out.println((myhour + 23) + ":" + ((mymin - 45) + 60));
+        else if (0 < myhour && myhour <= 23 && 45<= mymin && mymin <= 59) {
+            System.out.println((myhour - 1) + ":" + (mymin - 45));
         }
 
-        else if (myhour == 0 && mymin <= 59) {
+        else if (myhour == 0 && mymin <45 ) {
             System.out.println((myhour + 23) + ":" + ((mymin - 45) + 60));
         }
-        // else if (){
-        // System.out.println((myhour-1) +":"+ ((mymin - 45)+60));
-        // }
+        else if (myhour == 0 && 45<= mymin && mymin <= 59) {
+            System.out.println((myhour + 23) + ":" + (mymin - 45));
+        }
+        
         // return 0 ;
     }
 }
