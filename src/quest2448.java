@@ -11,21 +11,32 @@ public class quest2448 {
 
         Scanner mytime = new Scanner(System.in);
 
-        int myhour = mytime.nextInt();
-        int mymin = mytime.nextInt();
-        if (0 < myhour && myhour <= 23 &&  mymin <45 ) {
-            System.out.println((myhour - 1) + ":" + ((mymin - 45) + 60));
+        int myhour = mytime.nextInt(); int mymin = mytime.nextInt();
+        if ( 0 < myhour && myhour <= 2300 && mymin < 45){
+            System.out.println(((myhour+mymin)-115)+30);
         }
-        else if (0 < myhour && myhour <= 23 && 45<= mymin && mymin <= 59) {
-            System.out.println((myhour - 1) + ":" + (mymin - 45));
+        else if (myhour == 0 && mymin < 45){
+            System.out.println(2300 +" "+ (mymin - 15)+30);
         }
+        else if ( 0 < myhour && myhour <= 2300 && 45<= mymin && mymin <= 59){
+            System.out.println((myhour+mymin)- 45);
+        }
+        else if (myhour == 0 && 45<= mymin && mymin <= 59){
+            System.out.println(2300 + (mymin - 45));
+        }
+        // if (0 < myhour && myhour <= 23 &&  mymin <45 ) {
+        //     System.out.println((myhour - 1) + ":" + ((mymin - 45) + 60));
+        // }
+        // else if (0 < myhour && myhour <= 23 && 45<= mymin && mymin <= 59) {
+        //     System.out.println((myhour - 1) + ":" + (mymin - 45));
+        // }
 
-        else if (myhour == 0 && mymin <45 ) {
-            System.out.println((myhour + 23) + ":" + ((mymin - 45) + 60));
-        }
-        else if (myhour == 0 && 45<= mymin && mymin <= 59) {
-            System.out.println((myhour + 23) + ":" + (mymin - 45));
-        }
+        // else if (myhour == 0 && mymin <45 ) {
+        //     System.out.println((myhour + 23) + ":" + ((mymin - 45) + 60));
+        // }
+        // else if (myhour == 0 && 45<= mymin && mymin <= 59) {
+        //     System.out.println((myhour + 23) + ":" + (mymin - 45));
+        // }
         
         // return 0 ;
     }
