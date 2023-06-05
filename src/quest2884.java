@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class quest2448 {
+public class quest2884 {
     public static void main(String[] args) {
         // 45분 일찍 알람 설정하기 -> 원래 설정되어있는 알람을 45분 일찍 설정하기
         // 입력 : 첫째 줄 = H, M 주어짐. (0 ≤ H ≤ 23, 0 ≤ M ≤ 59)
