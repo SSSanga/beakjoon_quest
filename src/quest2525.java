@@ -2,13 +2,35 @@ import java.util.Scanner;
 
 public class quest2525 {
     public static void main(String[] args) {
-        Scanner time = new Scanner (System.in);
+        Scanner time = new Scanner(System.in);
         try {
-            int myhour = time.nextInt();
-            int mymin = time.nextInt();
-            
+            // 오븐 구이를 시작하는 시각과 오븐 구이를 하는데 필요한 시간 = 분단위 주어짐
+            // 첫째줄 입력: 현재시각. 현재시각 시 A 0<= A <= 23, 분 B 0 <= B <= 59
+            // 둘째줄 입력: 오븐구이 필요한 시간= 분 0 < = C < = 1000
+            // 첫째줄 출력: 종료되는 시각의 시와 분을 공백을 사이에 두고 출력
+            // *종료되는 시각의 시 = 0~23, 분 = 0~59,
+            // *23시 59분에서 1분 지나면 0시 0분!!!!!!!!!!
+            // 일단 A 입력, B입력 받고 C는 입력 받으면 나누기 60분!!!!!
+            // C를 60분으로 나누면 몫은 필요한 시간이 나오고 나머지는 필요한 분이 나옴
+            // 그럼 현재시각의 시에 C/60의 몫을 더하고 분에 C%60의 나머지를 더한다
+            // ex) 예제1_14:30이고 걸리는 시간은 20분 > 20/60=0, 20%60=20 => 14:50
+            // 예제2_17:40이고 걸리는 시간은 80분 > 80/60=1, 80%60=20 => 18:60
+            // 예제 2의 출력값은 만약 더한 값이 min이 60이상이면 출력 시는 H+1, M-60 => 19:00
+            // 예제3_23:48이고 걸리는 시간은 25분
+            // > 23/60=0 :출력, 25%60=25+B - 60 => H+1하면 24=0, M-60= 73-60=13
+            // 문제점 1) B가 30분 이상일때 나머지를 더한 뒤 -60을 해준다.
+
+            int A = time.nextInt(); // 현재시각 시
+            int B = time.nextInt(); // 현재시각 분
+            int C = time.nextInt(); // 필요시간 분
+
+           
+            System.out.println((A + (C / 60)) + " " + (B-60 + (C % 60)));
+
         } catch (Exception e) {
             // TODO: handle exception
         }
+        System.out.println();
+
     }
 }
