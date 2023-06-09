@@ -25,7 +25,16 @@ public class quest2525 {
             int C = time.nextInt(); // 필요시간 분
 
            
-            System.out.println((A + (C / 60)) + " " + (B-60 + (C % 60)));
+            // System.out.println((A + (C / 60)) + " " + (B + (C % 60)));
+            if (24 <= (A + (C / 60))){
+                System.out.println ((A + (C / 60))%24 + " " + (B + (C % 60)) );
+                if (60<=(B + (C % 60))){
+                    System.out.println ((A + (C / 60))/24 + " " + (B + (C % 60))%60 );
+                }
+            }
+            else {
+                System.out.println((A + (C / 60)) + " " + (B + (C % 60)));
+            }
 
         } catch (Exception e) {
             // TODO: handle exception
